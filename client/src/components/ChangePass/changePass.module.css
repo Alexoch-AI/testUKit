@@ -1,0 +1,137 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list__up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 80px 0 40px 0;
+}
+.list__up__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.list__up__body {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.list__inputs__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.list__up__bodyErr {
+  color: red;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 16px;
+
+  height: 42px;
+  width: 315px;
+  left: 0%;
+  right: 0%;
+  top: 27px;
+
+  border: 1px solid #d7dae4;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+input[name="checkPass"] {
+  margin-bottom: 20px;
+}
+
+.errInput {
+  outline: 0;
+  border: 2px solid #e74143;
+  background-color: rgba(231, 65, 68, 0.1);
+}
+
+input:focus {
+  outline: 0;
+  border: 2px solid #ffd445;
+  background-color: white;
+}
+
+label {
+  color: #4d475c;
+  margin-bottom: 2px;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 30px;
+
+  width: 192px;
+  height: 42px;
+
+  /* white */
+
+  background: #ffffff;
+  /* Gray 300 */
+
+  border: 1px solid #d7dae4;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  position: static;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.list__inputs__button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.errorMess {
+  color: red;
+  visibility: visible;
+}
+
+.errorVisibleHidden {
+  visibility: hidden;
+}
+
+.svgIcon {
+  position: absolute;
+  top: 33px;
+  right: 11px;
+}
+
+.svgIcon2 {
+  position: absolute;
+  top: 144px;
+  right: 11px;
+}
+
+@media (max-width: 375px) {
+  .list__up {
+    margin: 20px 15px;
+    width: 315px;
+  }
+}
