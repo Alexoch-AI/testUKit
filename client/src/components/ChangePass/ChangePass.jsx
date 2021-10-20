@@ -3,7 +3,6 @@ import style from './changePass.module.css'
 
 
 function ChangePass() {
-  const reg = /^(?=.*\d)(?=.*[A-Z]).{8,}$/
   const [inputs, setInputs] = useState({
     pass: '',
     checkPass: '',
@@ -22,6 +21,7 @@ function ChangePass() {
 
   const submitHandler = (e) => {
     e.preventDefault()
+    const reg = /^(?=.*\d)(?=.*[A-Z]).{8,}$/
     if(reg.test(inputs.pass) === true && inputs.pass === inputs.checkPass ){
       setSuccessFlag(true)
       setErrPass(false)
@@ -59,7 +59,7 @@ function ChangePass() {
           {successFlag && 
           <div className={style.svgIcon}>
             <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1L4.4375 9L1 5.36364" stroke="#4EB421" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 1L4.4375 9L1 5.36364" stroke="#4EB421" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
           }
@@ -74,13 +74,6 @@ function ChangePass() {
           name='checkPass' 
           id='checkPass' 
           type="password" />
-          {successFlag && 
-          <div className={style.svgIcon2}>
-            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1L4.4375 9L1 5.36364" stroke="#4EB421" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          }
           <div className={style.list__inputs__button}>
             <button>Сменить пароль</button>
           </div>
